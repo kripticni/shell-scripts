@@ -2,7 +2,7 @@
 
 source=$(cat $HOME/.cache/fastc.save | awk -F '\t' -v dir=$(pwd) '$1 == dir {print $2}')
 save=$2
-if [ -z "$source" ] && [ "$1" != "config" ]; then
+if { [ -z "$source" ] && [ "$1" != "config" ] } || { [ -z "$2" ] && [ "$1" == "config" ] }; then
   save=$(ls | xargs | fzf)
   arg="config"
 else
