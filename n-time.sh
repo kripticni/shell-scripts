@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-NUM_EXECUTIONS=100000
-PROGRAM="$HOME/Calculators/Sudoku/solver"
+NUM_EXECUTIONS=$2
+PROGRAM=$1
 
 TEMP_FILE=$(mktemp)
 START_TIME=$(date +%s.%N)
