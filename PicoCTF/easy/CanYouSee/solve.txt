@@ -1,0 +1,1 @@
+decode base64 found in exif data
