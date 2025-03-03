@@ -1,0 +1,6 @@
+git blame
+git shortlog -s
+OR
+git log --author"Pico..(the rest of the name)"
+OR
+git show (commit hash from blame)
