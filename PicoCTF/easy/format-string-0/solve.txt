@@ -1,0 +1,3 @@
+this doesnt sanitize the input in anyway
+so you can make it printf strings
+that have formatting
