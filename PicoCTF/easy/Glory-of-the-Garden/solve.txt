@@ -1,0 +1,2 @@
+cat the binary data, decode the hex with xxd
+it'll show up at the bottom

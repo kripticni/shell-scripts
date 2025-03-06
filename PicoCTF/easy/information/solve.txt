@@ -1,0 +1,1 @@
+another base64 encoded exif data solution

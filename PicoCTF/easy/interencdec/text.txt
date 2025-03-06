@@ -1,0 +1,2 @@
+double decode base64
+then crack ceaser/rot cipher

@@ -1,0 +1,2 @@
+uses vulnerable scanf for buffering input
+just give it a large stdin
