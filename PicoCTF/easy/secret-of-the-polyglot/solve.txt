@@ -1,0 +1,3 @@
+use file to find the type
+copy with correct extension and xdg-open
+concat the two flag fragments

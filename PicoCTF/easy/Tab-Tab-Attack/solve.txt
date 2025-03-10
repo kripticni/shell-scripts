@@ -1,0 +1,6 @@
+tree | xargs | sed 's/ └── /\//g' | awk '{print $1}' | bash | awk {'print $2'}
+but NixOS cant run dynamically linked binaries
+so i had to change into my newly made debian system
+
+on debian the tree cmd is different
+tree | xargs | sed 's/ ├── /\//g' | sed 's/ │   └── /\//g' | awk {'print $1'} | bash | awk {'print $2'}
