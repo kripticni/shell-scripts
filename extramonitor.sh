@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-intern="eDP-1"
-extern="HDMI-1"
+intern="eDP-1-1"
+extern="HDMI-1-1"
 choice=$1
 if [[ -z $choice ]]; then
 	choice=$(printf "disconnect\nconnect\nduplicate" | fzf)
