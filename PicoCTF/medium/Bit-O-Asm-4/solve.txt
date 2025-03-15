@@ -1,0 +1,16 @@
+we start off with
+	mov    DWORD PTR [rbp-0x4],0x9fe1a
+	cmp    DWORD PTR [rbp-0x4],0x2710
+	jle    0x55555555514e <main+37>
+so we have our first condition
+if 0x9fe1a is less than 0x2710, we jump down
+obviously 0x9fe1a is greater so we continue 
+to the next instruction
+	sub    DWORD PTR [rbp-0x4],0x65
+	jmp    0x555555555152 <main+41>
+<+37>:	add    DWORD PTR [rbp-0x4],0x65
+<+41>:  mov    eax,DWORD PTR [rbp-0x4]
+so we subtract 0x65 from 0x9fe1a and
+skip (jump over) the add instruction
+and get the eax and the flag after conversion
+

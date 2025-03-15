@@ -1,0 +1,5 @@
+just read the assembly again,
+this time with slight obfuscation
+"mov    DWORD PTR [rbp-0x4],0x9fe1a
+ mov    eax,DWORD PTR [rbp-0x4]"
+convert to decimal and get the flag, easy

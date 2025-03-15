@@ -1,0 +1,14 @@
+slightly more obfuscated
+	mov    DWORD PTR [rbp-0xc],0x9fe1a
+	mov    eax,DWORD PTR [rbp-0xc]
+so eax is 0x9fe1a
+	mov    DWORD PTR [rbp-0x8],0x4
+	imul   eax,DWORD PTR [rbp-0x8]
+multiplying those two gives us
+2619496
+and to that we 
+	add    eax,0x1f5
+and this only serves as obfuscation
+	mov    DWORD PTR [rbp-0x4],eax
+	mov    eax,DWORD PTR [rbp-0x4]
+so we get the flag, only a slight inconvinience

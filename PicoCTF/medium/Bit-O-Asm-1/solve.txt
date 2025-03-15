@@ -1,0 +1,3 @@
+just read the assembly
+"mov eax, 0x30"
+and convert it to decimal
