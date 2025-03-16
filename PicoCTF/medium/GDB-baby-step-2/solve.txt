@@ -1,0 +1,51 @@
+so this is what decides what eax will
+be finally:
+  401139:	3b 45 f4             	cmp    eax,DWORD PTR [rbp-0xc]
+  40113c:	7c ee                	jl     40112c <main+0x26>
+  40113e:	8b 45 fc             	mov    eax,DWORD PTR [rbp-0x4]
+
+it depends on the last rbp-0xc and last eax
+last eax is:
+  401136:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+
+so if rbp-0x8 is less than rbp-0xc, then we go into a loop:
+  40112c:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+  40112f:	01 45 fc             	add    DWORD PTR [rbp-0x4],eax
+  401132:	83 45 f8 01          	add    DWORD PTR [rbp-0x8],0x1
+  401136:	8b 45 f8             	mov    eax,DWORD PTR [rbp-0x8]
+  401139:	3b 45 f4             	cmp    eax,DWORD PTR [rbp-0xc]
+  40113c:	7c ee                	jl     40112c <main+0x26>
+
+and when it finally isnt we get rbp-0x4 
+
+
+starting variables:
+rbp-0x4 = 123098
+rbp-0x8 = 0
+rbp-0xc = 607
+
+entering the loop skips some of
+the intial instruction so at the end of
+first iteration we'd have:
+eax = rbp-0x8 = 0
+rbp-0xc = 607
+so we start the loop
+
+1st iter:
+eax = rbp-0x8 = 0
+rbp-0x4 = rbp-0x4 + eax = rbp-0x4
+rbp-0x8 = 1
+eax = 1
+rbp-0xc = 607
+
+so from this we can see that this 
+loop will repeat until rbp-0x8 is 607
+and rbp-0x4 will get the sum of all iterations 
+
+>>> for i in range(0,607):
+...     s=s+i
+
+>>> s+123098 #initial value of rbp-0x4
+
+and we get the flag
+no gdb required

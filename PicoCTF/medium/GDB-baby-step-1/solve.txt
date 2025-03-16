@@ -1,0 +1,6 @@
+we can read that the only
+instruction accessing the eax
+register is:
+mov    eax,0x86342
+with only using objdump -d {filename} -Mintel
+so the result is int("0x86342",16)

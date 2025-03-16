@@ -1,0 +1,9 @@
+break main
+use si to get to next asm instruction
+also x/i $pc to see your current instruction
+get to the mov eax,... line
+get rbp by doing info registers rbp
+calculate rbp-4
+examine the bits with
+x/4x (address)
+format and you have the flag, simple

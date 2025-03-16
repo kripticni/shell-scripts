@@ -1,0 +1,3 @@
+do objdump -d to get the disassembled program
+grep for mul and eax
+find the constant and translate it, easy
