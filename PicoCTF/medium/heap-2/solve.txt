@@ -1,0 +1,21 @@
+with gdb disas i was able to read that
+the address of win was
+0x00000000004011a0
+
+so thats what we need to write
+into the x variable, so when
+it gets called it'll move the rip
+to the function
+
+the address is 
+0x00000000004011a0, but thats in big endian
+to little endian it would be
+0xa011400000000000
+
+variables are once again 32 bytes apart
+so the payload is
+32 bytes + reversed endian of address + enter
+
+so i wrote up a quick python script
+that will fetch the ip through dns
+connect to the socket and send the payload

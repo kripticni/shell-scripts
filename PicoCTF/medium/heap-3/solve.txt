@@ -1,0 +1,18 @@
+this one was interesting
+and not as horrendous as the last one
+
+obviously you free the object initially
+first off i tried of just allocating pico over the entire heap
+in hopes of overwriting it since i was given the access to that
+unfortunetly due to the implementation of the glibc allocator 
+that would likely never happen before a segfault
+
+so then i decided to read more on the glibc allocator
+and i found that glibc keeps an array of fast alloc bins
+these are blocks of less than 64 bytes, so i instantly knew
+that if i was to just dealloc the obj and request an alloc
+of the same size, it would give me the same address
+
+the rest was easy, you pad the initial 30 bytes and then 
+write pico
+

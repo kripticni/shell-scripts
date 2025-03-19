@@ -1,0 +1,4 @@
+you can read that the heap addresses
+are 32 bytes apart, so you make a payload
+of 32 bytes to clone the gap and then
+write pico, which will overwrite safe_var
