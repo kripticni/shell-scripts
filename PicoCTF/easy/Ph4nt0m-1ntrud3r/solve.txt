@@ -1,0 +1,17 @@
+we open the file in wireshark
+and we inspect the tcp payloads
+
+cGljb0NURg== this packet was 
+out of order, but decoded its still
+"picoCTF" so we know we found the way
+to solve the problem
+
+XzM0c3lfdA== trasnlates to _34sy_t
+MzE4ZGIyMg== translates to 318db22
+[ezF0X3c0cw== translates to {1t_w4s (this packet was out of order)
+YmhfNHJfZg== translates to bh_4r_f
+bnRfdGg0dA== translates to nt_th4t
+
+so it goes
+
+picoCTF{1t_w4snt_th4t_34sy_tbh_4r_f318db22}

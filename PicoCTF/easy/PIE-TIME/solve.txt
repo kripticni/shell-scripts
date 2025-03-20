@@ -1,0 +1,8 @@
+by doing an objdump
+we can see the addresses of main and win
+in the binary they are at
+
+133d and 12a7, the difference is 150
+when we run our netcat, it will give us
+the address of main from which we subtract 150
+to get to the address of win, and that gives us the flag

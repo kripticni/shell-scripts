@@ -1,0 +1,11 @@
+see the poem when
+cating out the file,
+also notice that it has pgp
+
+the poem and the pgp suggest
+that this is a steganography problem
+this format isnt supported by steghide
+so for this we use zsteg
+
+zsteg finds the hidden data encoded in 
+base64, so we decode it and get the flag

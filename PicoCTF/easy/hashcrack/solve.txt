@@ -1,0 +1,30 @@
+we connect with netcat and acquire
+482c811da5d5b4bc6d497ffa98491e38
+
+so now we obviously just need to crack it
+using hash-identifier (hashid also works)
+we can see
+
+ HASH: 482c811da5d5b4bc6d497ffa98491e38
+
+Possible Hashs:
+[+] MD5
+[+] Domain Cached Credentials - MD4(MD4(($pass)).(strtolower($username)))
+both tools mainly recognize md5 
+so we assume its md5
+
+cracking would take too long on my machine so
+i use a website that has hashes cached
+we get, password123
+
+and we obtain the next hash
+b7a875fc1ea228b9061041b7cec4bd3c52ab3ce3
+using the same two tools we see that it is 
+a md1 hash
+and even my machine can easily crack md1
+and we get 'letmein'
+
+for the finale we get
+916e8c4f79b25028c9e467f1eb8eee6d6bbdff965f9928310ad30a8d88697745
+now this we see is a sha256 hash, thats hard to crack
+however our site has us covered and we get the flag

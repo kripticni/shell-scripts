@@ -1,0 +1,10 @@
+its simple really
+there is one vulnerability
+lines are split/determined by
+a ';' character which the user can input
+
+other than that the regular expression for
+returning is provided, so we can just input
+
+"string;RETURN 0" and it will start
+reading from the beginning, and we'll get the flag
