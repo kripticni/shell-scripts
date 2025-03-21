@@ -1,0 +1,7 @@
+to change the function pointer in python
+you dont input the hex address 
+but instead just the name of the 
+function you want to change the address to
+
+we can do this with the write_variable in the table
+and then reverse the encryption

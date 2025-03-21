@@ -1,0 +1,7 @@
+the eval function seems to be a literal
+implementation of a function pointer in python
+
+just input "win" so that it executes win()
+and now we reverse engineer the encryption
+
+which is really simple, in decrypt.py

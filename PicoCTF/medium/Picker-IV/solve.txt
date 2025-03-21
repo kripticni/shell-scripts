@@ -1,0 +1,4 @@
+much easier than the heap-* ctfs
+its heap-2 but without any of the complexities
+just objdump and input the address of the 
+win function

@@ -1,0 +1,6 @@
+its simple, we cant exactly execute the 
+function "win" but we can execute
+all of its code anyways
+since we are granted arbitrary code execution
+
+print(open('flag.txt','r').read())
