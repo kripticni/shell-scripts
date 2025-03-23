@@ -1,0 +1,49 @@
+initially i didnt know much on
+binary packing, so i tried to 
+disassemble the output as usual,
+however that gave no output
+then i xxd-ed and saw some 
+very unusual entropy for a bin 
+file
+
+i tried to run a file and it 
+asked for a password so i 
+figured if its just an executable
+it should be stored in plaintext
+so i ran strings on it, and 
+found the following:
+
+"$Info: This file is packed with the UPX executable packer http://upx.sf.net $
+$Id: UPX 3.95 Copyright (C) 1996-2018 the UPX Team. All Rights Reserved. $"
+
+as well as UPX! at the start and
+end of file, so i looked into it
+and got it on my system
+
+after reading the help page 
+for upx i found the decompress 
+flag, and after that we got 
+a valid file to disassemble
+
+after running strings and filtering
+strings out | grep -v _ | fgrep -v .
+i found the following:
+
+"Enter the password to unlock this file:
+You entered: %s
+Password correct, please see flag: 7069636f4354467b5539585f556e5034636b314e365f42316e34526933535f31613561336633397d
+Access denied"
+
+but i felt that was the easier way
+to the flag, so i decided to
+readelf to see the sections
+and noticed there is both
+.rodata and .data
+objdump -s -j .rodata out | awk -F'\t' '{print $NF}' | less
+and you can find the same string that way
+
+the other way would using
+pwndbg or ghidra
+
+in any case
+bytes.fromhex("7069636f4354467b5539585f556e5034636b314e365f42316e34526933535f31613561336633397d").decode("ascii")

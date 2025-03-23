@@ -1,0 +1,11 @@
+I used this site to bruteforce it
+https://www.boxentriq.com/code-breaking/caesar-cipher
+
+xqkwKBN{z0bib1wv_l3kzgxb3l_429in00n}
+picoctf r tat on d crypt d **  *
+join the two and you get the flag
+
+the smarter way to do this would
+be to fit picoctf that we already know
+into a table and derive the key from
+there, but that would be slower

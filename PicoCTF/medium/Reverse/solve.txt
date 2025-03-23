@@ -1,0 +1,15 @@
+you can really just use strings
+on this and get the flag immediatly
+but that doesnt feel right
+
+so we do readelf -S ret
+and objdump -s -j .text ret
+
+E.1.H.picoCTF{H.
+3lf_r3v3H.E.H.U.
+H.r5ing_suH.cce5
+5ful
+
+now reading is trivial
+we could have done the 
+same with .rodata
