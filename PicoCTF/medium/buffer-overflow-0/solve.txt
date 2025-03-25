@@ -1,0 +1,5 @@
+just overflow it with more than 16 bytes
+easiest ctf ever
+
+also the int sig is an unused argument 
+in the sigsegv handler setup
