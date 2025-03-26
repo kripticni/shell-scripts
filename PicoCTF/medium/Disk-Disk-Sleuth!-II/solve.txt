@@ -1,0 +1,6 @@
+we do mmls and fsstat as per usual and then
+
+fls -o 2048 -r -p dds2-alpine.flag.img -f ext3 | grep down-at-the-bottom.txt
+fcat -o 2048 -f ext3 root/down-at-the-bottom.txt dds2-alpine.flag.img
+
+the flag is nicely formatted for us
