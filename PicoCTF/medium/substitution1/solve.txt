@@ -1,0 +1,5 @@
+we use an online tool to perform
+a frequency attack and get the flag
+but the flag we get has a J instead of a Q
+in the cleartext so after we substitute it
+to get FREQUENCY, the flag is correct

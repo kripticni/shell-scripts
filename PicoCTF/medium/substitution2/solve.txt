@@ -1,0 +1,6 @@
+we just bruteforce it
+ive done all these attacks manually by hand
+on various other competitions so redoing them
+seems like a waste of time
+
+hence i use tools
