@@ -1,0 +1,14 @@
+same process for the beginning like
+sleughkit-apprentice, then you find three files
+in /root 
+flag.txt (shreded)
+flag.txt.enc
+.bash_history
+
+reading out .bash_history gives you 
+the tools the perp used to encrypt
+the flag, so you can use
+
+openssl aes256 -d -salt -in flag.txt.enc -out flag.txt -k unbreakablepassword1234567
+
+to decrypt it, and get the flag

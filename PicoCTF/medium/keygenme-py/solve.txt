@@ -1,0 +1,21 @@
+after reading the source
+we see that we need to input 
+the already know static part of the key
+and then the mangled sha256 of "MORTON"
+
+we compute the hash
+in the repl by using:
+  import hashlib
+  hashlib.sha256('MORTON'.encode()).hexdigest()
+281f75c0145b05e6ccbeecc66a61614d8c974c1a49356c118fcbab4735862fea
+
+the source code goes in order
+45362718
+so we manually unmangle the hash in the repl:
+  print(l[4]+l[5]+l[3]+l[6]+l[2]+l[7]+l[1]+l[8])
+########
+
+so the key should be
+picoCTF{1n_7h3_|<3y_of_########}
+
+and we do in fact get access

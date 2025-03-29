@@ -1,0 +1,18 @@
+do the usual as in operation orchid and disk-sleugh-2
+
+by trying to login with ssh key-less we can see 
+that it requires a private key, so thats our target
+
+fls -p -r -o ****** -f *** disk.img | grep ssh
+
+we can find both the private and a public key
+we now use icat (or fcat) to get the contents of
+the private key and redirect them to key_file
+
+now trying to login would say that we have wrong
+permissions for our key_file, but a simple
+chmod 600 key_file
+fixes that quickly
+
+we log into the machine and cat the flag
+that is in our home directory

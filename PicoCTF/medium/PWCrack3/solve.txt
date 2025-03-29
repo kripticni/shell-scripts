@@ -1,0 +1,12 @@
+its pretty simple
+first i wrote a program to let me
+actually humanly read the bytes in
+the level3.hash.bin and then i cracked the hash
+
+john --incremental hash.txt --fork=4 --format=raw-MD5
+john hash.txt --show --format=raw-MD5
+
+?:865e
+
+the idea was to try each combination in the program but 
+that didnt really seem professional
