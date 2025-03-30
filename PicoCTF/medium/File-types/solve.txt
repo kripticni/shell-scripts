@@ -1,0 +1,64 @@
+first we run the file command 
+and see that the Flag.pdf is 
+actually a shell archive text
+
+we do a little bit of research about
+the file type, its just a script with
+encoded data, and you extract the 
+data by simply running the script
+
+to do this we need the gnu shar utils
+we add them to our config and run the 
+script
+
+we run the script to get a "flag" file
+however if we cat it, its binary data
+
+so we run file on it and notice its
+an ar archive file, so we do 
+ar x flag
+
+and run file again to see its a 
+cpio archive now
+GNU `cpio' copies files to and from archives
+its another archiving utility, so we do
+cpio -idv --directory cpio < flag
+
+now we get something more modern, 
+a bzip2 arhive, so we do 
+bzip2 -d flag
+
+now a gunzip archive, we need to rename the file
+mv flag flag.gz
+gunzip flag.gz
+
+now an lzip archive, a lossless compression format
+lzip -d flag.out
+
+now next up we have lz4, i remember that this is 
+a very fast algorithm and that its in use for 
+custom kernel patching from when i got into gentoo
+lz4 -d flag flag.lz4-decoded
+
+and we get an lzma now
+mv flag flag.lz4
+mv flag.lz4-decoded flag.lzma
+unlzma flag.lzma
+
+now we get an lzop
+mv flag flag.lzop
+lzop -d flag.lzop
+
+now another lzip
+lzip -d flag
+
+now an xz
+mv flag flag.xz
+xz -d flag.xz
+
+and finally ascii text
+but its a hex
+
+so we get out our python repl and 
+bytes.fromhex("7069636f4354467b66316c656e406d335f6d406e3170756c407431306e5f6630725f3062326375723137795f37396230316332367d0a").decode('utf-8')
+and finally we have the flag

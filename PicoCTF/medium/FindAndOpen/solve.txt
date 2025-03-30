@@ -1,0 +1,12 @@
+by going through the pcap
+we come across one packet that
+stands out as a base64 encoded packet
+
+we decode it to get the first part of the flag
+This is the secret: picoCTF{R34DING_LOKd_
+
+since it says that this is the secret
+and the next packets hint at 
+trying to open the zip file with it
+
+after we do just that, we get the flag
