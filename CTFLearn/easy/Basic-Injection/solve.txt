@@ -1,0 +1,6 @@
+as it says this is a very basic sql injection
+we only need to input the textbook
+
+' or '1'='1
+
+and we retrieve the whole table and the flag
