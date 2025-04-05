@@ -1,0 +1,14 @@
+after reading the docs you can see
+that the input numbers are in order
+
+66
+79
+78
+74
+79
+86
+73
+
+
+translate it to ascii
+and you get the flag
