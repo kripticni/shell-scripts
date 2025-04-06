@@ -1,0 +1,4 @@
+can be done with strings run | grep -i pico
+but the intended method is to run
+./run Hello\! so that the binary
+takes the string as its first argument
