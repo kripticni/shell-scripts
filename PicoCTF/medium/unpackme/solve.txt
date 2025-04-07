@@ -1,0 +1,22 @@
+first, when downloading the file i immediatly noticed
+the upx in the name, it was familiar from another
+way earlier ctf where i first discovered binary
+packers and the upx packer
+
+i unpacked the binary with upx -d
+then i ran strings and found nothing
+so i booted up my debian distrobox
+to run the binary
+
+running the binary asked
+"Whats my favorite number"
+so i disassembled the binary
+with objdump and looked through it
+in nvim, first finding main then
+finding the cmps in main
+
+one cmp i noticed was immediatly after 
+a scan, so that must have been the one
+i turned the hex into a decimal using
+python and then inputed it into the program
+which resulted in us getting the flag
