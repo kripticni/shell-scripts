@@ -1,0 +1,15 @@
+i have already studied modular arithmetic and 
+the needed algorithms in school and for 
+my competetive programming competition i did gcd
+i was very familiar with the modular inverse from
+doing some RSA a long time ago, so this challenge
+was pretty easy
+
+i believe an even easier way would have been
+to just take the modulus 41 result and calculate
+the power of it to -1 with 41
+
+also the formatter
+really wants the numbers array to look
+the way it does and its hard to argue 
+with it so i wont bother

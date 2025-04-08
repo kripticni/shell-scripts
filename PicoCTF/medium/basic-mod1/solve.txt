@@ -1,0 +1,3 @@
+i just took my very *modular* code
+from basic-mod2 since i did that first
+and slightly altered it for this scenario
