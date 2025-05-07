@@ -1,0 +1,8 @@
+first run the solve.py to obtain cleartext
+it has comments explaining itself there
+
+then the cleartext file is a python2 script
+you can either use an interpreter or quickly
+convert it to python 3 like i did, then
+you want to self input the file through itself
+and get the flag
