@@ -1,0 +1,24 @@
+running the program resulted in it
+asking me for a password, so i searched
+for input functions in the program and only
+found one in arg232, arg232 was only called
+once and it was to store itself in arg432
+
+and arg432 was compared against once in
+an if statement in function arg133
+and it was later used in arg122 
+to derive the flag obviously
+
+so it was only a matter of 
+getting the cleartext from 
+the comparasing in arg133
+
+>>> a = "!\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ"+ \
+...             "[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ "
+>>> a[71]+a[64]+a[79]+a[79]+a[88]+a[66]+a[71]+a[64]+a[77]+a[66]+a[68]
+'happychance'
+
+$ python bloat.flag.py
+Please enter correct password for flag: happychance
+Welcome back... your flag, user:
+picoCTF{d30bfu5c4710n_f7w_5e14b257}
