@@ -1,0 +1,18 @@
+i was already somewhat familiarized with
+morse code, but ive never tried learning it
+on my own nor listening to any to decipher it
+so i decided to try myself on this ctf
+
+.-- .... ....- --...
+.... ....- --... ....
+----. ----- -..
+.-- ..--- ----- ..- ----. .... --...
+
+i managed to write this down by hand
+and translate it manually, add pauses
+at new lines and that was the flag
+
+another simpler solution would have been to
+use a spectrogram (with logarithim scale)
+and a translator, but that wouldn't have been
+as fun
