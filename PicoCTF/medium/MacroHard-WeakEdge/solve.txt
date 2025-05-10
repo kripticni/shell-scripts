@@ -1,0 +1,26 @@
+if you were to run file on Forensics\ is\ fun.pptm
+it would tell you its just a 2007 microsoft powerpoint
+presentation, but if know a little more about these 
+types of files you would have first thought of it
+simply being a zip archive, it is one by its 
+magic number too but file also checks the file headers
+
+after unzipping the file i tried to just quickly run
+$ grep -Irli pico . 
+but that didnt work, so i decided to look at
+the structure of the archive with
+$ tree
+if you dont have tree, $ file .
+would have been a good substituion but
+i find tree to be much more human readable
+
+in the output one file caught my attention
+./ppt/slideMasters/hidden
+cating it have me some characters that were
+obviously way out of place, but it also
+perfectly fit the criteria for base64
+so i did
+
+$ base64 -d <(cat hidden | tr -d ' ')
+
+and that was enough to secure the flag

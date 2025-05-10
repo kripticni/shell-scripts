@@ -1,0 +1,14 @@
+firstly extract the archive
+tar xf leak.tar
+
+to get the flag i did
+paste usernames.txt passwords.txt | grep cultiris
+cultiriscvpbPGS{P7e1S_54I35_71Z3}
+
+i immediatly noticed the rot13 here
+then i did a quick tr to get the flag
+also wrote a short bash script which
+could be an alias
+
+#!/usr/bin/env bash
+echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m'

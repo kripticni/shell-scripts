@@ -1,0 +1,14 @@
+sudo -l again, or just ls -lha
+to see that you can run
+.server.py as sudo 
+
+then also notice that you 
+can remove .server.py
+and place in your own 
+python code
+(you can also vim and :wq!)
+
+achieving arbitrary python
+execution, then run the 
+programs provided to get
+the flag
