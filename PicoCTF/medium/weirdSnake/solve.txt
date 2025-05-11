@@ -1,0 +1,9 @@
+i decided the best idea would be to try to
+reconstruct a python script that would have
+the same functionality
+
+to check the disassembly we do
+python -m dis snake.py
+
+you can see my notes in the
+snake.py
