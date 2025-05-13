@@ -1,0 +1,10 @@
+first, to escape the intial capitalization
+you should do something along the lines of
+\\\\\\\\\\\\\\;
+
+after that, you are only able to use
+commands that are full english words
+and luckily you only need 
+cat and find
+
+then finding the flag is trivial
