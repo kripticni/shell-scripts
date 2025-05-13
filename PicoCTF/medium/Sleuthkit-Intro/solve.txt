@@ -1,0 +1,2 @@
+its as simple as running mmls on it
+and reading the output

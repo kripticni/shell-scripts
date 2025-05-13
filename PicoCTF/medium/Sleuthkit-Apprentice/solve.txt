@@ -1,0 +1,17 @@
+use mmls to see the partitions on
+the disk image and their corresponding offsets
+
+use fsstat to find out what kind 
+of filesystems they are
+
+the first one is /boot/ and you wont 
+find anything important there after you
+use fls -o 2048 disk.flag.img -f ext4
+
+the third partition is the main 
+disk where you can recursively list with -r 
+all files and use -p to show the full paths
+
+grep for anything containing flag 
+and then use either icat or fcat 
+to get the contents and the flag
