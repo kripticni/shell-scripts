@@ -1,0 +1,16 @@
+mascarpone
+IMGUMPHQZC
+jarlsberg
+JMPRGDCPK
+
+DMZQZRKG
+banonlgs
+
+very annoying substitution cipher, i noticed
+that the length of the ciphertext is the same
+as the length of the plaintext and that the
+encryption is randomized every time
+
+so then i rolled for a small length of ciphertext
+and tried to cover most of the alphabet
+and sub it out, and it worked
