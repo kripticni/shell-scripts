@@ -1,0 +1,13 @@
+I have had some prior experience with
+cron so this came off rather easy
+
+i first tried seeing if i have any cronjobs
+$ crontab -l
+that resulted in nothing so i decided 
+to check for crontabs systemwide in
+/etc/crontab
+and 
+/etc/cron.d/
+
+and in one of those you can find 
+the flag in plaintext

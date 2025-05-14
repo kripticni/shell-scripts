@@ -1,0 +1,4 @@
+simply follow the instructions
+i personally had to use distrobox
+because my nixos doesnt run dynamically
+linked executables without some changes

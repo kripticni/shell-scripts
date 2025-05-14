@@ -1,0 +1,30 @@
+from the socket leak given in the 
+text of the ctf, we got the login password
+and the security questions were some
+generally common knowledge too
+
+after getting into the server
+we got to /root/ and saw
+the file the server is running as
+a login script, and the flag in plaintext
+
+however we weren't given sufficient permissions
+to read the flag.txt's content
+then i checked the running processes and ps -u root
+to see the privilage level of the server script
+my first thought was to change the server's code
+into reading it for us, since it had sufficient privilages
+
+however there was no text editor so i tried to change it with 
+sed -i 's/\/home\/player\/banner/\/root\/flag/g' script.py
+and then realised i dont have the permissions to alter the
+file at all
+
+so i figured i need to abuse the filesystem instead
+as the server script opened /home/player/banner regardless of
+what it was
+
+so i simply removed the banner, and added a symlink with
+the same name to /root/flag.txt
+upon opening nc to the server again
+the python script hands us the flag
