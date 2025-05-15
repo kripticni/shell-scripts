@@ -1,0 +1,3 @@
+zsteg is enough to solve it
+you know to use zsteg because .png
+is not compatable with steghide

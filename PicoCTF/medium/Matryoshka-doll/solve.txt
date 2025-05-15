@@ -1,0 +1,17 @@
+giving an image and explaining what
+matryoshka dolls are only associated me
+of file embedding for which we know to 
+use binwalk, originally i "binwalk --extract"-ed
+twice and then i remembered knowing of a 
+recursive option for binwalk
+
+looked at the help page and was taken by
+suprise to see --matryoshka
+
+obviously the next thing i ran was 
+rm -rf extractions
+binwalk dolls.jpg --extract --matryoshka
+
+i let tab autocomplete guide my filepath
+to the final flag.txt, i catted it out
+and there was the flag
