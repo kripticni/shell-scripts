@@ -1,0 +1,13 @@
+it can be done in two ways
+first you could bruteforce it 
+but that would probably take 
+forever, the second way is to
+use the spelling bee file to 
+derive his random key
+
+i used the site planetcalc.com
+and its substitution cipher cracker
+and gave it a large sample
+of the file and it derived the key
+
+XUNMRYDFWHGLSTIBJCAVOPEZQK
