@@ -1,0 +1,5 @@
+first, enter the payload into the socket
+retrieve the data and save it to hex.txt
+clean the bad values with clean-hex.sh
+then get the text from clean-text.py
+find your flag (or grep it)
