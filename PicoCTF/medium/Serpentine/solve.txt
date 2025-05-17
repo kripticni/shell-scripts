@@ -1,0 +1,3 @@
+i just patched the script so that
+choosing b actually runs the 
+print_flag function
