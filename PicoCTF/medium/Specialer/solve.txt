@@ -1,0 +1,8 @@
+to navigate the system
+you pretty much only need
+
+echo *, for listing files
+echo "$(<filename)", for reading files
+cd, for traversing the fs
+
+and you'll be able to find the flag
