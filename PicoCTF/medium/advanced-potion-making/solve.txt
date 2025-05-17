@@ -1,0 +1,51 @@
+opening the file with bvi (or any hex editor)
+confirms that it is some sort of image based
+on the headers being IHDR, sRGD, gAMA...
+
+so then i fixed the header to
+89 50 4E 47 0D 0A 1A 0A
+which stands for .PNG
+
+also the following 4 to to 
+represent the length of the
+IHDR chunk
+00 00 00 0D
+this is consistent over all pngs
+you may as well think of it as
+a magic number itself
+
+after that the file was recognised as intended
+i checked the file with everything i had but
+we didnt get any steganography output, the
+image seemed pretty red to me but upon
+looking at the hex it was clear that 
+this image wasnt all one colored so
+then i had to check it personally
+
+using https://imagecolorpicker.online/
+i found that at certain positions the
+color changes from #ee131c to #ee121c
+this one bit change on the green channel
+following some sort of trajectory across
+the image and it was clear that this was
+the flag, it was only a matter of finding
+an image editor that had the fill function
+that wouldnt overlook that one bit, or maybe
+even changing all #ee121c's in the hex to
+another color
+
+so i got a little introduction to the 
+pillow library that i saw as a dependency
+to sigBits.py that i was using to solve
+the MSB CTF perviously to write a little
+script to tell me all the pixel colors
+in an image, then i modified it to also
+show me their count/frequency
+
+after seeing that there is 60k pixels that
+are differentiated from the rest, i wrote
+another quick python script that would
+replace a rgb with a rgb of my choice
+
+then after changing all 3 rogue pixels
+we get the flag after opening the new image
