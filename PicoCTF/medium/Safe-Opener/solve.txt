@@ -1,0 +1,5 @@
+just read the source code
+and conclude that the input string
+will be base64 encoded and you then
+would need to decode the plaintext key
+in the source code to get the flag
