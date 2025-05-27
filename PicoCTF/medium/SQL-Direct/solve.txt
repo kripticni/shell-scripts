@@ -1,0 +1,24 @@
+similarly like the second part of
+the More SQL flag, there is also
+somewhat of a master table for postgre
+too, its called pg_tables
+
+however this contains system tables
+that we arent interested in so we
+set the schemaname parameter to be
+equal to 'public'
+
+SELECT tablename FROM pg_tables WHERE schemaname = 'public';
+
+and we get:
+ tablename
+-----------
+ flags
+(1 row)
+
+so now that we know the name of the table with our flag
+we do a very simple
+
+SELECT * FROM flags;
+
+and we retrieve the flag
