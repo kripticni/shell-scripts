@@ -1,0 +1,13 @@
+as our username we do whatever
+and for the password we inject
+
+' or '1'='1
+
+and we successfully login due to the query being:
+
+SELECT * FROM users WHERE name='kripticni' AND password='' or '1'='1'
+
+now the site doesnt gives us the flag right away
+but it says that its in plainsight, so we 
+inspect the page to find the flag laying
+there in a hidden paragraph element
