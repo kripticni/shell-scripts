@@ -1,0 +1,15 @@
+a privilage escalation based ctf
+we dont have any files in our home dir 
+nor any useful scripts
+
+but if we check 
+sudo -l 
+we can see that we have
+access to vi
+
+if we run vi, we can 
+see that we have a plugin
+that lets us traverse the fs
+so after that we just navigate
+to /root/flag.txt and read
+the contents
