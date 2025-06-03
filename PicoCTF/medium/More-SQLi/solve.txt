@@ -1,0 +1,35 @@
+in the first page
+we dont know any valid user but in the 
+query provided after failing to login 
+we can see that the password goes before the
+user in the query
+
+this means that as our password we can put
+
+' OR '1'='1' --
+the -- at the end will count everything else
+as a comment so we got a query that will show
+us the entire table
+
+SELECT id FROM users WHERE password = '' OR '1'='1' -- AND username = 'asd'
+
+the kampala entry has the address "Maybe all the tables"
+so for the second sql injection we need to find all the tables
+except we are going in blind this time since we cant see the structure
+of the sql query they have
+
+Kampala' UNION SELECT sql,'pad','pad' FROM sqlite_master --
+
+sqlite_master is a table for sqlite that contains information
+about all other tables, and the sql collumn is the one with
+info around the tables creation, we use union to conjoin the
+two statements and get all the tables
+
+tables are: hints, more_table, offices, users
+
+we can see that the more_table has a collumn flag
+so thats exactly what we are after
+
+Kampala' UNION SELECT flag,'pad','pad' FROM more_table --
+
+and this grants us the flag
