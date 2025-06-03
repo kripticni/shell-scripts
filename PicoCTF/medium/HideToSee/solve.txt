@@ -1,0 +1,5 @@
+extract the steganographically hidden data with
+steghide --extract -sf atbash.jpg
+and then run the ciphered context 
+throught the solver which was hinted
+in the image
