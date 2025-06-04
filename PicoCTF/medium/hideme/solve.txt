@@ -1,0 +1,8 @@
+"every file has a flag" and "hideme"
+implies of file inception
+
+we do a little binwalk
+binwalk -C extracted -e flag.png
+
+it finds a hidden image
+we open it and read to see the flag
