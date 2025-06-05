@@ -1,0 +1,18 @@
+its a caesar cipher with a rot of -1
+i used my own tool i made for a presentation
+here is the output
+
+Izaberite sifru:
+1. Caesar
+2. Vigenerer
+3. Hebern
+0. Izlaz
+Izbor: 1
+Izaberite:
+1. Enkriptujte
+2. Dekriptujte
+Izbor: 2
+Unesite tekst: dspttjohuifsvcjdpoabrkttds
+Unesite shift (broj): 27
+Rezultat:
+xxxxxxxxxxxxxxxxxxxxx
