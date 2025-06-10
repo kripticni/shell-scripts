@@ -1,0 +1,8 @@
+read through the packet log
+copy the flag as ascii text
+
+then you can either remove the 
+spaces by hand or if you wanna
+be a shell wizard like i do
+
+echo 'flag' | tr -d ' '

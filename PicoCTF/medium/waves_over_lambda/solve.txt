@@ -1,0 +1,2 @@
+input the text into planetcalc.com/8047
+and "string".lower()
