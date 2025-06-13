@@ -1,0 +1,30 @@
+this one was quite challenging because im only familiar with sdk
+we do the usual mmls and fsstat and fls
+
+we find a couple of files in
+/root but none of them are all
+that useful, even .ash_history is
+really useless
+
+in the challenge it pretty much says that
+if we cat out the files we will miss out 
+on information
+
+so we have to look at the hex output
+also considering the name is "Dear Diary"
+we can consider that another word for journal
+and if the filesystem's mode=journal it will
+also store the file changes
+(the default is ordered which only stores the metadata,
+a journal is a file that tracks changes before they are 
+commited to disk, its useful for integrity and recovery)
+
+the journal's inode is 8, we also know the offset
+what we are looking for and how to look for it
+
+icat -o 1140736 disk.flag.img 8 | xxd | grep -A 5 -B 2 txt
+
+and it shows us all the fragmented flag pieces
+from the first 8 sectors
+
+piece them together and you get the flag
