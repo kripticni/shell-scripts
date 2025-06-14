@@ -1,0 +1,20 @@
+ive tried to reverse the MSB to LSB using xxd 
+as in pervious forensics challenges but that 
+was to no help, so then i searched for a
+script that would analyse MSB orientation
+and i found sigBits.py by Pulho on github
+
+after reading the README i got
+into my debian-12 distrobox to 
+run the python script
+
+distrobox create --name debian-stable --image debian:12 #i already had one
+distrobox enter debian-stable
+
+then we get the necessary packages
+
+sudo apt install python3 pip pipx python3-pillow
+
+then get the script and run it with -t=msb for 
+msb analysis, out of there we get a file called outputSB,
+then i used bvi to look for pico and i located the flag
