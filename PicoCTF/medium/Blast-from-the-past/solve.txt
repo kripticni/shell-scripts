@@ -1,0 +1,4 @@
+this problem is likely
+broken as of now
+overwriting data with exiftool
+causes the samsung tag to be unreadable
