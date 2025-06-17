@@ -1,0 +1,5 @@
+i removed the txt because it was
+100k, but the solution is as 
+simple as doing
+
+cat anthem.flag.txt | grep -i pico
