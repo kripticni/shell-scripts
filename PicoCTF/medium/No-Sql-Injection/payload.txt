@@ -1,0 +1,13 @@
+for your email, you can find it in the source
+picoplayer355@picoctf.org
+and since mongodb is nosql, we can inject it with
+{ "$ne": null }
+which would return true for any field not null
+
+now we get to /admin
+and there is nothing there
+
+however if we analyse the response with wireshark
+we'll see that the server responds with a js obj
+and a token which is base64 encoded
+decoding it gives us the flag
