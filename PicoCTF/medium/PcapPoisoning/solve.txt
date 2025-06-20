@@ -1,0 +1,6 @@
+its stupidly simple to go through
+the pcap file and find the flag
+esspecially when utilizing filters of wireshark
+
+easiest way would still be
+strings trace.pcap | grep -i pico
