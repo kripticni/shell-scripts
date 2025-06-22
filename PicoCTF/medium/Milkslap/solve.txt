@@ -1,0 +1,24 @@
+firstly i went to the page and
+then sources to download the gif/image directly
+
+i noticed that it is a png which could only mean
+i was meant to run zsteg on it, however zsteg
+kept crashing due to not enough stack space with
+this error message
+
+/nix/store/7nzvhcg16crip2axzsxgpzi7rf8kq8r5-ruby3.3-zpng-0.4.5/lib/ruby/gems/3.3.0/gems/zpng-0.4.5/lib/zpng/scan_line.rb:369:in `prev_scanline_byte': stack level too deep (SystemStackError)
+
+i firstly attempted simply giving it unlimited stack space
+using ulimit -s unlimited but that resulted in the kernel
+killing the process after it used up 10 gigabytes of my memory
+
+the second thing i did was notice in the error message that 
+zsteg is written in ruby, so i looked up how to resolve
+the problem with this error with stack space and this
+came up as the solution
+
+export RUBY_THREAD_VM_STACK_SIZE=10000000
+
+after it, zsteg gave us the flag right away
+and i also updated my NixOS configuration with
+this export
