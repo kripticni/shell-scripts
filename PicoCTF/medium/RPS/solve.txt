@@ -1,0 +1,37 @@
+first the headers looked very interesting
+but upon closer inspection all the sys functions
+looked perfectly fine to me, i then thought that
+the intended solution was to crack srand() and rand()
+which i knew to be cryptographically insecure from
+my personal attempts at writing some amateur encryption
+to know the computer's solution ahead of time but
+that would be impossible without knowing the local
+system time on the remote machine, so it wasnt that
+
+this was a very interesting binary exploitation
+ctf because it never required me to employ any
+kind of actual technique like overflowing a buffer
+or doing some return oriented programming or 
+even exploiting a cryptographically insecure 
+library
+
+instead this program has a fault in its logic
+first off i noticed that the 1st input is 3
+bytes at max, but the input for rock/paper/scissors
+was 100 bytes, which is awfully suspicious 
+considering that the author was mindful of this
+the first time around and not the second
+the correct buffer would be sizeof(scissors)+2
+at most
+
+then looking further at the conditions, 
+and since i am familiar with string.h
+i noticed that the code doesnt use strcmp
+to check for the right string instead it 
+employs strstr, which means that to win 
+every round you would need to give it 
+"rockpaperscissors" as input, since 
+it will always find the win string as
+a substring of this
+
+do this 5 times, and we acquire the flag
