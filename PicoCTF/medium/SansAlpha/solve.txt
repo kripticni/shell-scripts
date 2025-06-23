@@ -1,0 +1,18 @@
+there is two ways to solve this
+ctf, the first is using regexes
+to match binary names and the
+second is to use $- and splice 
+strings, ill be doing the regexes
+because they are much faster
+
+after doing ./* we can see the 
+exact location of the flag, so then
+we just simply want to run 
+
+/???/??[!6]?64 ./*/????????
+
+we need to run base64 like this
+because instead it would try to 
+run x86_64, and this will give 
+us a base64 encoded flag that 
+we can just decode
