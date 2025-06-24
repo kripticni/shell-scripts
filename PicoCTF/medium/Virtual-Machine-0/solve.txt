@@ -1,0 +1,31 @@
+after finding awful .dae openers
+online and slowly and painfully looking inside
+the box on my old machine
+
+i counted 40 teeth on the main gear
+and 8 teeth on the side gear
+
+40/8 = 5 times more rotations of side gear 
+compared to the rotations of main gear
+
+python repl calculates that we have
+198614235373674103788002620892906122161486462450519980447221073787164701565
+
+however this deffinetly does look off, and it surely 
+isnt the flag so it must have been manipulated in some way
+i decide to look at the bits look to specify this further
+
+>>> a = 198614235373674103788002620892906122161486462450519980447221073787164701565
+>>> a.to_bytes()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+OverflowError: int too big to convert
+
+this OverflowError that i got
+can be solved by first calculating the minimum
+length of our big_int
+
+>>> length = (a.bit_length()+7)//8
+>>> a.to_bytes(length,byteorder='big')
+
+and to my suprise, we get the flag right here
