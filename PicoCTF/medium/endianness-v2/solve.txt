@@ -1,0 +1,24 @@
+from other forensics challenge it is
+pretty easy to recongnise that this
+is a reverse jpeg file from the
+JFIF at the beginning and from the
+wrongly typed in string of letters
+at the beginning of every jpeg
+since this is a 32 bit machine 
+we do this to reverse it
+
+xxd -e -g4 challengefile | xxd -r > file_reversed.bin
+
+we use -e to get a little endian dump that
+is grouped by 4 bytes (or 32 bits)
+(it doesnt matter if the original was 
+little or big endian, this works regardless
+since xxd by default dumps the big endian
+way of it seeing the hex, and this switches
+that to little)
+
+then we reverse that operation with -r
+to get back the binary
+(you can even do the same for file_reversed.bin
+to reconstruct the original challenge file with
+an EOF byte at the end)
