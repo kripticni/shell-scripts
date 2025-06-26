@@ -1,0 +1,7 @@
+after running the hash through 
+hashid and hash-identifier i concluded
+its most likely sha256
+
+they obviously gave us a wordlist
+for this crack, so we have plenty 
+enough information to derive it

@@ -1,0 +1,13 @@
+the hash we obtain is
+cba918c000164f89fa4f30dbde448602
+
+we also get to know that the hash is
+a md5 hash, we can use either john or hashcat
+john --incremental hash.txt --fork=4 --format=raw-MD5
+hashcat -m 0 -a 3 -w 3 --fork=4 hash.txt --increment --increment-min=1 --increment-max=20
+but this is a binary exploitation problem and not a cryptography one
+
+their scp commmand likely doesnt work on some machines, it hasnt worked on mine
+this is the one i do instead
+scp -P 54576 ctf-player@shape-facility.picoctf.net:~/flaghasher flaghasher
+

@@ -1,0 +1,24 @@
+i instantly saw the solution
+but i just had no clue how to implement it
+
+you need to read rip from the call instruction
+with format string
+calculate the offset to print_flag function from main
+and then with format string
+write the address to the rip on the stack
+so that it returns to th print_flag function
+
+so first we disassemble it
+the offset is 0x1401 - 0x1269 = 408 bytes
+the stack in echo_valley is 0x70 + rbp = 120 bytes
+
+for format string we would want
+5 + 120/8 + 1 = 21 to get rip
+and 20 for rbp
+
+the recieved address ends with 413, same as 
+the mov instruction in main so thats our 
+confirmation
+
+
+
